@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AuraCraft</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .blog-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+        }
+        .blog-img {
+            height: 240px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Adam.html">AuraCraft</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Adam.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">PRODUCT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deal.html">SPECIAL DEAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="newstyle.html">NEW STYLE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero bg-primary text-white text-center">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold py-5">Our Blog</h1>
+            <p class="lead">Insights, tutorials, updates and creative tips</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="blog-card card">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620" class="blog-img w-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Top Branding Trends in 2024</h5>
+                            <p>Explore the latest design approaches shaping brand identities worldwide.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="blog-card card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="blog-img w-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">How to Build Stunning Websites</h5>
+                            <p>Learn key principles behind modern responsive website design.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="blog-card card">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" class="blog-img w-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Effective Graphic Design Tips</h5>
+                            <p>Quick techniques to enhance your visual creativity and workflow.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>www.AuraCraft.com</p>
+    </footer>
+
+</body>
+</html>

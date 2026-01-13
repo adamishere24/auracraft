@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - AuraCraft</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .product-card {
+            transition: all 0.3s ease;
+            border: none;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .product-img {
+            height: 260px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        .price {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        .badge-custom {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+        }
+        .filter-btn {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="Adam.html">AuraCraft</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navItems">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Adam.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="product.html">PRODUCT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="newstyle.html">NEW STYLE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deal.html">SPECIAL DEALS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero bg-primary text-white">
+        <div class="container py-5">
+            <div class="row py-5 text-center">
+                <h1 class="fw-bold display-4">Shop Latest Collections</h1>
+                <p class="lead">Premium fashion wear curated for you</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-4 bg-light text-center">
+        <div class="container">
+            <div class="btn-group flex-wrap justify-content-center">
+                <button class="filter-btn btn active" data-filter="all">All</button>
+                <button class="filter-btn btn" data-filter="men">Men</button>
+                <button class="filter-btn btn" data-filter="women">Women</button>
+                <button class="filter-btn btn" data-filter="shoes">Shoes</button>
+                <button class="filter-btn btn" data-filter="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Items -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- Item 1 - MEN -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="men">
+                    <div class="product-card card h-100">
+                        <span class="badge bg-danger badge-custom">HOT</span>
+                        <img src="https://images.unsplash.com/photo-1520975918318-3eb98461c9fe?q=80&w=1000" 
+                             class="product-img card-img-top" alt="Men Jacket">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Leather Jacket</h5>
+                            <p class="card-text">Premium leather jacket designed for comfort and bold styling.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$120</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 - WOMEN -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="women">
+                    <div class="product-card card h-100">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000" 
+                             class="product-img card-img-top" alt="Women Dress">
+                        <div class="card-body">
+                            <h5 class="card-title">Elegant Summer Dress</h5>
+                            <p class="card-text">Soft-flowing floral design perfect for warm weather outings.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$89</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 - SHOES -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="shoes">
+                    <div class="product-card card h-100">
+                        <span class="badge bg-success badge-custom">NEW</span>
+                        <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=1000"
+                             class="product-img card-img-top" alt="Sneakers">
+                        <div class="card-body">
+                            <h5 class="card-title">Urban Sneakers</h5>
+                            <p class="card-text">Lightweight and stylish sneakers built for everyday comfort.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$75</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 - ACCESSORIES -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="accessories">
+                    <div class="product-card card h-100">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a41552231641?q=80&w=1000"
+                             class="product-img card-img-top" alt="Watch">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Wrist Watch</h5>
+                            <p class="card-text">Minimalistic design with stainless steel finish.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$149</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 - WOMEN -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="women">
+                    <div class="product-card card h-100">
+                        <img src="https://images.unsplash.com/photo-1514995428455-447d4443fa7f?q=80&w=1000"
+                             class="product-img card-img-top" alt="Handbag">
+                        <div class="card-body">
+                            <h5 class="card-title">Designer Handbag</h5>
+                            <p class="card-text">Premium quality handbag crafted with smooth finishing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$110</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 - MEN -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="men">
+                    <div class="product-card card h-100">
+                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000"
+                             class="product-img card-img-top" alt="Men Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Slim Fit Shirt</h5>
+                            <p class="card-text">Cotton-rich shirt perfect for formal and casual wear.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$55</span>
+                                <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                    <li class="page-item active"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item"><a class="page-link">Next</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p class="mb-0">www.AuraCraft.com</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Filter Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".filter-btn");
+            const items = document.querySelectorAll("[data-category]");
+
+            buttons.forEach(btn => {
+                btn.onclick = () => {
+                    buttons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filter = btn.dataset.filter;
+
+                    items.forEach(item => {
+                        item.style.display = (filter === "all" || item.dataset.category === filter)
+                            ? "block"
+                            : "none";
+                    });
+                };
+            });
+        });
+    </script>
+
+</body>
+</html>
