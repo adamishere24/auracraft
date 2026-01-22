@@ -193,6 +193,88 @@
         position: relative;
       }
     }
+
+    /* =========================================
+   MOBILE RESPONSIVE FIX – AURACRAFT LOGIN
+   ========================================= */
+@media (max-width: 768px) {
+
+  body {
+    align-items: flex-start;
+    padding: 30px 10px;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+
+  /* Stack everything */
+  .form-box,
+  .info-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 40px 25px;
+  }
+
+  /* Disable sliding animations */
+  .form-box.Login,
+  .form-box.Register,
+  .info-content.Login,
+  .info-content.Register {
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .container.active .form-box.Login,
+  .container.active .form-box.Register,
+  .container.active .info-content.Login,
+  .container.active .info-content.Register {
+    left: 0;
+    right: 0;
+  }
+
+  /* Hide info panels on mobile */
+  .info-content {
+    display: none;
+  }
+
+  /* Typography scaling */
+  .form-box h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .regi-link {
+    text-align: center;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+  .form-box {
+    padding: 30px 18px;
+  }
+
+  .form-box h2 {
+    font-size: 22px;
+  }
+}
+
+
+    
   </style>
 </head>
 
